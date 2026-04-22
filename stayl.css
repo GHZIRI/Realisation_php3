@@ -1,0 +1,174 @@
+:root {
+    --main-bg: #f4f7f6;
+    --card-bg: #ffffff;
+    --nav-bg: #2c3e50;
+    --title-color: #1a252f;
+    --body-text: #546e7a;
+    --white-text: #ffffff;
+    --action-edit: #3498db;
+    --action-delete: #e74c3c;
+    --action-add: #2ecc71;
+    --border-soft: #dee2e6;
+    --radius: 10px;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+body {
+    background-color: var(--main-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: var(--body-text);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cart {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-soft);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.cart:hover {
+    transform: translateY(-5px);
+}
+
+.cart h2 {
+    color: var(--title-color);
+    margin: 0 0 15px 0;
+    font-size: 1.4rem;
+}
+
+.cart p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid var(--border-soft);
+    padding-top: 15px;
+}
+
+.btn-edit, .btn-delete, .add-link {
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: opacity 0.2s;
+}
+
+.btn-edit:hover, .btn-delete:hover, .add-link:hover {
+    opacity: 0.8;
+}
+
+.btn-edit {
+    background-color: var(--action-edit);
+    color: var(--white-text);
+}
+
+.btn-delete {
+    background-color: var(--action-delete);
+    color: var(--white-text);
+}
+
+.add-link {
+    display: inline-block;
+    background-color: var(--action-add);
+    color: var(--white-text);
+    margin-bottom: 30px;
+}
+form {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+input[type="text"], 
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-soft);
+    border-radius: 6px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical; /
+}
+
+button[name="add"] {
+    background-color: var(--action-add);
+    color: var(--white-text);
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    
+}
+
+
+button[name="add"]:hover {
+    opacity: 0.9;
+    border-radius: 2px ;
+}
+.add-container {
+    width: 100%;
+    max-width: 100px;
+    margin: 20px ;
+    display: flex;
+    justify-content: left; 
+}
+
+.add-link {
+    display: block;
+    width: 150px;
+    text-align: center;
+    background-color: var(--action-add);
+    color: var(--white-text);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s;
+}
+
+.add-link:hover {
+    transform: scale(1.01);
+    opacity: 0.9;
+}
+

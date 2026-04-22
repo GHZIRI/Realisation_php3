@@ -1,4 +1,5 @@
 <?php
+ include 'header.php'; 
 
 class Articles {
     private $conn;
